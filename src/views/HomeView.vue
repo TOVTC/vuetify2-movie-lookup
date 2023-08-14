@@ -1,8 +1,11 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <h1>Movie Lookup</h1>
+    <v-row justify="center" class="my-5">
+      <v-col cols="5">
+        <v-form class="text-center">
+          <v-icon color="primary" size="150" class="my-3">mdi-movie-search</v-icon>
+          <v-text-field label="Search for a movie" class="my-5" />
+        </v-form>
       </v-col>
     </v-row>
   </v-container>
