@@ -31,8 +31,7 @@ export default {
     search() {
       this.$refs.searchForm.validate();
       if (this.isFormValid) {
-        router.push({ name: 'search' })
-        // router.push({ name: 'results', params: { movieName: movieName.value } })
+        router.push({ name: 'search', query: { searchTerm: this.searchTerm.trim() } })
       }
     }
   }
