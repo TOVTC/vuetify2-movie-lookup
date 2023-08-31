@@ -15,6 +15,7 @@
 
 <script>
 import MovieList from '@/components/MovieList.vue';
+import MediaService from '@/services/MediaService.js'
 
 export default {
   props: ['searchTerm'],
@@ -23,11 +24,21 @@ export default {
   },
   data() {
       return {
-          
+          movies: []
       };
   },
-  created() {
-    console.log(this.$route.query.searchTerm)
+  async created() {
+    try {
+      let results = await MediaService.getResults(this.$route.query.searchTerm);
+      if (!results) {
+          alert("An error occurred");
+          return;
+      }
+      this.movies = results;
+      console.log(this.movies);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 </script>
