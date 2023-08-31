@@ -17,6 +17,12 @@ const routes = [
     props: route => ({
       query: route.searchTerm
     })
+  },
+  {
+    path: '/details/:id',
+    name: 'details',
+    component: () => import('../views/DetailView.vue'),
+    props: true
   }
 ]
 
