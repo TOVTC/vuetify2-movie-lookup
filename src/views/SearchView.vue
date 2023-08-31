@@ -7,7 +7,7 @@
     </v-row>
     <v-row class="ma-5">
       <v-col>
-        <MovieList />
+        <MovieList :movies="movies" />
       </v-col>
     </v-row>
   </v-container>
@@ -15,7 +15,7 @@
 
 <script>
 import MovieList from '@/components/MovieList.vue';
-import MediaService from '@/services/MediaService.js'
+import MediaService from '@/services/MediaService.js';
 
 export default {
   props: ['searchTerm'],
@@ -23,19 +23,18 @@ export default {
     MovieList
   },
   data() {
-      return {
-          movies: []
-      };
+    return {
+        movies: []
+    };
   },
   async created() {
     try {
       let results = await MediaService.getResults(this.$route.query.searchTerm);
       if (!results) {
-          alert("An error occurred");
+          alert('An error occurred');
           return;
       }
       this.movies = results;
-      console.log(this.movies);
     } catch (error) {
       console.log(error);
     }
