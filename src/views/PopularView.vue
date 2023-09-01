@@ -2,7 +2,7 @@
   <v-container>
     <v-row justify="center" class="ma-5">
       <v-col>
-        <h1>Search Results "{{ this.$route.query.searchTerm }}":</h1>
+        <h1>Popular:</h1>
       </v-col>
     </v-row>
     <v-row class="ma-5">
@@ -29,16 +29,16 @@ export default {
   },
   async created() {
     try {
-      let movies = await MediaService.getResults(this.$route.query.searchTerm);
+      let movies = await MediaService.getPopular();
       if (!movies) {
-        alert('An error occurred');
+        alert("An error occurred");
         return;
       }
       this.movies = movies;
     }
-    catch (error) {
+    catch (err) {
       alert("An error occurred");
-      console.log(error);
+      console.log(err);
     }
   }
 }

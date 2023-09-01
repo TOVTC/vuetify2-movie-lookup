@@ -23,7 +23,27 @@ const routes = [
     name: 'details',
     component: () => import('../views/DetailView.vue'),
     props: true
-  }
+  },
+  {
+    path: '/trending',
+    name: 'trending',
+    component: () => import('../views/TrendingView.vue'),
+  },
+  {
+    path: '/popular',
+    name: 'popular',
+    component: () => import('../views/PopularView.vue'),
+  },
+  {
+    path: '/rated',
+    name: 'rated',
+    component: () => import('../views/RatedView.vue'),
+  },
+  {
+    path: '/playing',
+    name: 'playing',
+    component: () => import('../views/PlayingView.vue'),
+  },
 ]
 
 const router = new VueRouter({

@@ -8,8 +8,10 @@
         </v-btn>
       </v-toolbar-title>
       <v-spacer />
-      <v-btn to="/" text>Home</v-btn>
-      <v-btn to="/about" text>About</v-btn>
+      <v-btn to="/trending" text>Trending</v-btn>
+      <v-btn to="/popular" text>Popular</v-btn>
+      <v-btn to="/rated" text>Top Rated</v-btn>
+      <v-btn to="/playing" text>Now Playing</v-btn>
     </v-app-bar>
     <v-main>
       <router-view/>
