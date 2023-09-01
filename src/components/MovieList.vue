@@ -23,16 +23,16 @@
     },
     methods: {
       generateTitle(title, date) {
-          if (!date || date === 'null' || date.trim().length === 0) {
-            return title;
-          }
-            return `${title} (${date.split('-')[0]})`
+        if (!date || date === 'null' || date.trim().length === 0) {
+          return title;
+        }
+          return `${title} (${date.split('-')[0]})`
       },
       generatePosterPath(path) {
-          if (!path || path === 'null' || path.trim().length === 0) {
-            return '/favicon.png';
-          } 
-          return `https://image.tmdb.org/t/p/original${path}`;
+        if (!path || path === 'null' || path.trim().length === 0) {
+          return '/favicon.png';
+        } 
+        return `https://image.tmdb.org/t/p/original${path}`;
       },
       redirect(id) {
         router.push({ name: 'details', params: { id: id } })
