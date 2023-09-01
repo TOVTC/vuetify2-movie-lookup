@@ -7,7 +7,7 @@
       </v-row>
       <v-row justify="center" class="ma-5">
         <v-col col="6">
-          <v-img :src="generatePosterPath(film.poster_path)"></v-img>
+          <v-img :src="generatePosterPath(film.poster_path)" :aspect-ratio="10/15"></v-img>
         </v-col>
         <v-col col="6">
           <p>Placeholder</p>

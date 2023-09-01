@@ -14,7 +14,7 @@
       <v-btn to="/playing" text>Now Playing</v-btn>
     </v-app-bar>
     <v-main>
-      <router-view/>
+      <router-view :key="$route.fullPath" />
     </v-main>
     <v-footer class="justify-between" color="primary">
       <v-container fluid>
