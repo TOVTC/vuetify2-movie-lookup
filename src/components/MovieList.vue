@@ -1,5 +1,6 @@
 <template>
-  <v-list>
+  <div>
+    <v-list v-if="movies.length > 0">
     <v-list-item v-for="(item, i) in movies" :key="i" @click="redirect(item.id)">
       <v-list-item-icon>
         <v-img :src="generatePosterPath(item.poster_path)" :aspect-ratio="10/15"></v-img>
@@ -9,6 +10,14 @@
       </v-list-item-content>
     </v-list-item>
   </v-list>
+  <v-list v-else>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title v-text="'Nothing to display'"></v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+  </v-list>
+  </div>
 </template>
 
 <script>
@@ -18,7 +27,7 @@
     name: 'MovieList',
     data() {
       return {
-        filmOptions: [],
+
       }
     },
     methods: {
@@ -35,8 +44,7 @@
         return `https://image.tmdb.org/t/p/original${path}`;
       },
       redirect(id) {
-        router.push({ name: 'details', params: { id: id } })
-        console.log(id);
+        router.push({ name: 'details', params: { id: id } });
       }
     },
   }
