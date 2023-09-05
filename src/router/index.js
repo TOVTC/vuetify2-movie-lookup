@@ -44,6 +44,11 @@ const routes = [
     name: 'playing',
     component: () => import('../views/PlayingView.vue'),
   },
+  {
+    path: '/:catchAll(.*)',
+    name: '404',
+    component: () => import('@/views/HomeView.vue'),
+  },
 ]
 
 const router = new VueRouter({
