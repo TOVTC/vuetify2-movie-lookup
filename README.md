@@ -24,10 +24,10 @@
   * Axios
   
   ## Usage Information<a name="usage"></a>
-  [Vuetify 2 Movie Lookup]()</br>
+  [Vuetify 2 Movie Lookup](https://tovtc.github.io/vuetify2-movie-lookup/)</br>
     
   This application is a simple movie search website.</br>
-  </br>![Vuetify2 Movie Lookup](./src/assets/vuetify2-movie-lookup-wide.png "Vuetify 2 Movie Lookup")</br>
+  </br>![Vuetify2 Movie Lookup](./src/assets/vuetify2-movie-lookup.png "Vuetify 2 Movie Lookup")</br>
     
   ## Authors & Acknowledgements<a name="credits"></a>
   Special thanks to the following resources:
